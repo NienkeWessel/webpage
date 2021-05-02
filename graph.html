@@ -24,11 +24,11 @@ html {
 
 body {
     height: 100vh;
-    background: #d7d1d9;
+    background: #FFFFFF;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #d7d1d9);
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFFFFF);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #d7d1d9);
+    background: linear-gradient(to right, #FFFFFF, #FFFFFF);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
@@ -89,8 +89,8 @@ ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
 }
 
 ul.ks-cboxtags li input[type="checkbox"]:checked + label {
-    border: 2px solid #a78fb8;
-    background-color: #825e9a;
+    border: 2px solid #dadada;
+    background-color: #282828;
     color: #fff;
     transition: all .2s;
 }
@@ -281,15 +281,20 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
     };
     options.nodes = {
         color: {
-            background: '#ffdfa9',
-            border:  '#905b00',
+            background: '#f5f5f5',
+            border:  '#525252',
             highlight: {
-                border: '#2B7CE9',
-                background: '#D2E5FF'
+                border: '#525252',
+                background: '#FFFFFF',
+            }
+        },
+        font: {
+            color: '#525252',
+            highlight: {
+                color: '#525252',
             }
         }
     };
-    
     console.log("x:", "test")
 
     // initialize your network!
@@ -305,22 +310,22 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
     // Give colors
     for (i = 0, len = en.length; i < len; i++) {
         edges.update([
-                {id: en[i], color: '#f6d212'}
+                {id: en[i], color: '#76c252'}
             ]);
     };
     for (i = 0, len = nl.length; i < len; i++) {
         edges.update([
-                {id: nl[i], color: '#f66b12'}
+                {id: nl[i], color: '#dda944'}
             ]);
     };
     for (i = 0, len = es.length; i < len; i++) {
         edges.update([
-                {id: es[i], color: '#4e93bf'}
+                {id: es[i], color: '#5e8acc'}
             ]);
     };
     for (i = 0, len = de.length; i < len; i++) {
         edges.update([
-                {id: de[i], color: '#49a75e'}
+                {id: de[i], color: '#cc5e75'}
             ]);
     };
     //network.fit();
