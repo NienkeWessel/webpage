@@ -24,11 +24,11 @@ html {
 
 body {
     height: 100vh;
-    background: #FFEFBA;
+    background: #d7d1d9;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
+    background: -webkit-linear-gradient(to right, #FFFFFF, #d7d1d9);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+    background: linear-gradient(to right, #FFFFFF, #d7d1d9);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
@@ -89,8 +89,8 @@ ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
 }
 
 ul.ks-cboxtags li input[type="checkbox"]:checked + label {
-    border: 2px solid #1bdbf8;
-    background-color: #12bbd4;
+    border: 2px solid #a78fb8;
+    background-color: #825e9a;
     color: #fff;
     transition: all .2s;
 }
@@ -166,6 +166,8 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
         {id: 22, from: 'worstelen', to: 'dromen', label: "con", class: 'es'},
         {id: 23, from: 'dromen', to: 'praten', label: "con", class: 'es'},
         
+        
+        // German part
         {id: 24, from: 'lachen', to: 'denken', label: "über", class: 'de'},
         {id: 25, from: 'vertrouwen', to: 'wachten', label: "auf", class: 'de'},
         {id: 26, from: 'vertrouwen', to: 'luisteren', label: "auf", class: 'de'},
@@ -176,6 +178,91 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
         
         {id: 31, from: 'vragen', to: 'kijken', label: "nach", class: 'de'},
         {id: 32, from: 'bedanken', to: 'verontschuldigen', label: "für", class: 'de'},
+        
+        {id: 33, from: 'weten', to: 'afhangen', label: "von", class: 'de'},
+        {id: 34, from: 'weten', to: 'vluchten', label: "von", class: 'de'},
+        {id: 35, from: 'weten', to: 'vertrekken', label: "von", class: 'de'},
+        {id: 36, from: 'weten', to: 'spreken', label: "von", class: 'de'},
+        {id: 37, from: 'weten', to: 'dromen', label: "von", class: 'de'},
+        {id: 38, from: 'afhangen', to: 'vluchten', label: "von", class: 'de'},
+        {id: 39, from: 'afhangen', to: 'vertrekken', label: "von", class: 'de'},
+        {id: 40, from: 'afhangen', to: 'spreken', label: "von", class: 'de'},
+        {id: 41, from: 'afhangen', to: 'dromen', label: "von", class: 'de'},
+        {id: 42, from: 'vluchten', to: 'vertrekken', label: "von", class: 'de'},
+        {id: 43, from: 'vluchten', to: 'spreken', label: "von", class: 'de'},
+        {id: 44, from: 'vluchten', to: 'dromen', label: "von", class: 'de'},
+        {id: 45, from: 'vertrekken', to: 'spreken', label: "von", class: 'de'},
+        {id: 46, from: 'vertrekken', to: 'dromen', label: "von", class: 'de'},
+        {id: 47, from: 'spreken', to: 'dromen', label: "von", class: 'de'},
+        
+        // Dutch part
+        {id: 48, from: 'luisteren', to: 'wijzen', label: "naar", class: 'nl'},
+        {id: 49, from: 'luisteren', to: 'kijken', label: "naar", class: 'nl'},
+        {id: 50, from: 'luisteren', to: 'vragen', label: "naar", class: 'nl'},
+        {id: 51, from: 'wijzen', to: 'kijken', label: "naar", class: 'nl'},
+        {id: 52, from: 'wijzen', to: 'vragen', label: "naar", class: 'nl'},
+        {id: 53, from: 'kijken', to: 'vragen', label: "naar", class: 'nl'},
+        
+        {id: 54, from: 'vertrouwen', to: 'wachten', label: "op", class: 'nl'},
+        {id: 55, from: 'vertrouwen', to: 'wijzen', label: "op", class: 'nl'},
+        {id: 56, from: 'wachten', to: 'wijzen', label: "op", class: 'nl'},
+        
+        {id: 57, from: 'bedanken', to: 'verontschuldigen', label: "voor", class: 'nl'},
+        {id: 58, from: 'bedanken', to: 'vluchten', label: "voor", class: 'nl'},
+        {id: 59, from: 'verontschuldigen', to: 'vluchten', label: "voor", class: 'nl'},
+        
+        {id: 60, from: 'dromen', to: 'spreken', label: "van", class: 'nl'},
+        {id: 61, from: 'dromen', to: 'afhangen', label: "van", class: 'nl'},
+        {id: 62, from: 'dromen', to: 'vluchten', label: "van", class: 'nl'},
+        {id: 63, from: 'dromen', to: 'weten', label: "van", class: 'nl'},
+        {id: 64, from: 'spreken', to: 'afhangen', label: "van", class: 'nl'},
+        {id: 65, from: 'spreken', to: 'vluchten', label: "van", class: 'nl'},
+        {id: 66, from: 'spreken', to: 'weten', label: "van", class: 'nl'},
+        {id: 67, from: 'afhangen', to: 'vluchten', label: "van", class: 'nl'},
+        {id: 68, from: 'afhangen', to: 'weten', label: "van", class: 'nl'},
+        {id: 69, from: 'vluchten', to: 'weten', label: "van", class: 'nl'},
+        
+        {id: 70, from: 'lachen', to: 'zorgenmaken', label: "om", class: 'nl'},
+        
+        {id: 71, from: 'dromen', to: 'zorgenmaken', label: "over", class: 'nl'},
+        {id: 72, from: 'spreken', to: 'zorgenmaken', label: "over", class: 'nl'},
+        {id: 73, from: 'spreken', to: 'dromen', label: "over", class: 'nl'},
+        {id: 74, from: 'denken', to: 'dromen', label: "over", class: 'nl'},
+        {id: 75, from: 'denken', to: 'zorgenmaken', label: "over", class: 'nl'},
+        {id: 76, from: 'denken', to: 'spreken', label: "over", class: 'nl'},
+        
+        
+        // English part
+        {id: 77, from: 'wijzen', to: 'kijken', label: "over", class: 'en'},
+        
+        {id: 78, from: 'wachten', to: 'vragen', label: "for", class: 'en'},
+        {id: 79, from: 'wachten', to: 'bedanken', label: "for", class: 'en'},
+        {id: 80, from: 'wachten', to: 'verontschuldigen', label: "for", class: 'en'},
+        {id: 81, from: 'vragen', to: 'bedanken', label: "for", class: 'en'},
+        {id: 82, from: 'vragen', to: 'verontschuldigen', label: "for", class: 'en'},
+        {id: 83, from: 'bedanken', to: 'verontschuldigen', label: "for", class: 'en'},
+        
+        {id: 84, from: 'vluchten', to: 'vertrekken', label: "from", class: 'en'},
+        
+        {id: 85, from: 'afhangen', to: 'vertrouwen', label: "on", class: 'en'},
+        
+        {id: 86, from: 'denken', to: 'weten', label: "about", class: 'en'},
+        {id: 87, from: 'denken', to: 'lachen', label: "about", class: 'en'},
+        {id: 88, from: 'denken', to: 'zorgenmaken', label: "about", class: 'en'},
+        {id: 89, from: 'denken', to: 'spreken', label: "about", class: 'en'},
+        {id: 90, from: 'denken', to: 'dromen', label: "about", class: 'en'},
+        {id: 91, from: 'weten', to: 'lachen', label: "about", class: 'en'},
+        {id: 92, from: 'weten', to: 'zorgenmaken', label: "about", class: 'en'},
+        {id: 93, from: 'weten', to: 'spreken', label: "about", class: 'en'},
+        {id: 94, from: 'weten', to: 'dromen', label: "about", class: 'en'},
+        {id: 95, from: 'lachen', to: 'zorgenmaken', label: "about", class: 'en'},
+        {id: 96, from: 'lachen', to: 'spreken', label: "about", class: 'en'},
+        {id: 97, from: 'lachen', to: 'dromen', label: "about", class: 'en'},
+        {id: 98, from: 'zorgenmaken', to: 'spreken', label: "about", class: 'en'},
+        {id: 99, from: 'zorgenmaken', to: 'dromen', label: "about", class: 'en'},
+        {id: 100, from: 'spreken', to: 'dromen', label: "about", class: 'en'},
+        
+        
     ]);
 
     // create a network
@@ -194,9 +281,8 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
     };
     options.nodes = {
         color: {
-            border: '#1bdbf8',
-            background: '#12bbd4',
-            border:  '#1bdbf8',
+            background: '#ffdfa9',
+            border:  '#905b00',
             highlight: {
                 border: '#2B7CE9',
                 background: '#D2E5FF'
@@ -210,10 +296,10 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
     var network = new vis.Network(container, data, options);
     
     // Make array 
-    var en = [1, 5, 8];
-    var nl = [2, 6, 9];
+    var en = [1, 5, 8, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
+    var nl = [2, 6, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76];
     var es = [3, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
-    var de = [4, 7, 11, 24, 25, 26, 27, 28, 29, 30, 31, 32];
+    var de = [4, 7, 11, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47];
     
     
     // Give colors
@@ -229,7 +315,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
     };
     for (i = 0, len = es.length; i < len; i++) {
         edges.update([
-                {id: es[i], color: '#4990a7'}
+                {id: es[i], color: '#4e93bf'}
             ]);
     };
     for (i = 0, len = de.length; i < len; i++) {
@@ -309,6 +395,8 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
         }
     }
 </script>
+
+<center>
 <ul class="ks-cboxtags">
 <li>
 <input type="checkbox" id="english" name="english" value="English" onchange= "english()" checked>
@@ -326,6 +414,8 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 <input type="checkbox" id="deutsch" name="deutsch" value="Deutsch" onchange= "deutsch()" checked>
 <label for="deutsch"> Deutsch</label>
 </li>
+</ul>
+</center>
 
 </body>
 </html>
