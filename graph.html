@@ -138,11 +138,12 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
         {id: 'wachten', label: 'Wait'},
         {id: 'wijzen', label: 'Point'},
         {id: 'kijken', label: 'Look'},
-        {id: 'vragen', label: 'Ask'}
+        {id: 'vragen', label: 'Ask'},
+        {id: 'onderwerpen', label: 'Subject'}
     ]);
 
     // create an array with edges
-    var edges = new vis.DataSet([  //next: 106
+    var edges = new vis.DataSet([  //next: 107
         {id: 1, from: 'praten', to: 'beginnen', label: "with", group: 'en'},
         {id: 2, from: 'praten', to: 'beginnen', label: "met", class: 'nl'},
         {id: 3, from: 'praten', to: 'beginnen', label: "con", class: 'es'},
@@ -238,6 +239,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
         {id: 75, from: 'denken', to: 'zorgenmaken', label: "over", class: 'nl'},
         {id: 76, from: 'denken', to: 'spreken', label: "over", class: 'nl'},
         
+        {id: 107, from: 'denken', to: 'onderwerpen', label: "aan", class: 'nl'},
         
         // English part
         {id: 77, from: 'wijzen', to: 'kijken', label: "at", class: 'en'},
@@ -268,6 +270,8 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
         {id: 98, from: 'zorgenmaken', to: 'spreken', label: "about", class: 'en'},
         {id: 99, from: 'zorgenmaken', to: 'dromen', label: "about", class: 'en'},
         {id: 100, from: 'spreken', to: 'dromen', label: "about", class: 'en'},
+        
+        {id: 106, from: 'luisteren', to: 'onderwerpen', label: "to", class: 'en'},
         
         
     ]);
@@ -308,7 +312,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
     var network = new vis.Network(container, data, options);
     
     // Make array 
-    var en = [1, 5, 8, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
+    var en = [1, 5, 8, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 106];
     var nl = [2, 6, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 101, 102, 103, 104, 105];
     var es = [3, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
     var de = [4, 7, 11, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47];
