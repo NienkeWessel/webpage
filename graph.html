@@ -34,6 +34,35 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+.but{
+    height: 70px;
+    padding: 2px 2px 2px 2px;
+    border: 0px;
+    background-color: transparent;
+    margin-left: 10px; 
+}
+
+#infobox {
+    width: 90%;
+    height: 75%;
+    z-index: 5;
+    background: #FFFFEE;
+    position: absolute;
+    left: 5%; 
+    top: 5%;
+    visibility: visible;
+    display: block;
+    padding: 30px;
+    font-family: Arial;
+    font-size: 17px;
+    border-radius: 25px;
+}
+
+@media screen and (min-width: 500px) {
+    #infobox {
+        width: 490px;
+    }
+}
 
 .container {
     max-width: 640px;
@@ -273,6 +302,8 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
         
         {id: 106, from: 'luisteren', to: 'onderwerpen', label: "to", class: 'en'},
         
+        {id: 108, from: 'weten', to: 'denken', label: "of", class: 'en'},
+        
         
     ]);
 
@@ -312,8 +343,8 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
     var network = new vis.Network(container, data, options);
     
     // Make array 
-    var en = [1, 5, 8, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 106];
-    var nl = [2, 6, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 101, 102, 103, 104, 105];
+    var en = [1, 5, 8, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 106, 108];
+    var nl = [2, 6, 9, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 101, 102, 103, 104, 105, 107];
     var es = [3, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
     var de = [4, 7, 11, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47];
     
@@ -346,6 +377,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
     
     
     function english() {
+        console.log("x:", "test")
         if (document.getElementById("english").checked) {
             for (i = 0, len = en.length; i < len; i++) {
                 edges.update([
@@ -410,9 +442,38 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
             };
         }
     }
+    
+    //document.getElementById('infobutton').onclick = toggle_vis()
+    
+    function toggle_vis() { 
+        console.log("x:", "test")
+        var x = document.getElementById("infobox");
+        if (x.style.visibility === "hidden") {
+            x.style.visibility = "visible";
+            x.style.top = "5%";
+            x.style.display = "block";
+            x.style.position = "absolute";
+            console.log(x.style.display);
+            console.log("From hidden to visible", x.style.visibility);
+        } else {
+            x.style.visibility = "hidden";
+            x.style.position = "relative";
+            x.style.top = "-9999px";
+            x.style.display = "none";
+            console.log(x.style.display);
+            console.log("From visble to hidden", x.style.visibility);
+        }
+    };
 </script>
 
 <center>
+<div id="infobox">
+<h1>Prepositional verbs</h1>
+
+
+Hello sldf skdflsfs shfs jfslkf jsldjf slkfn sdfnsld fsjfhioaepvn s fasdfnae vafhsodif
+</div>
+
 <ul class="ks-cboxtags">
 <li>
 <input type="checkbox" id="english" name="english" value="English" onchange= "english()" checked>
@@ -432,5 +493,8 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 </li>
 </ul>
 </center>
+
+<button type='button' id="infobutton" class="but" onclick="toggle_vis()"> <img src="infoicon.png" width="40px"></button>
+
 </body>
 </html>
