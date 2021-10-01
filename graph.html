@@ -44,7 +44,9 @@ body {
 
 #infobox {
     width: 70%;
-    height: 70%;
+    height: -webkit-calc(100% - 240px);
+    height:    -moz-calc(100% - 240px);
+    height:         calc(100% - 240px);
     z-index: 5;
     background: #f5f5f5;
     position: absolute;
@@ -62,17 +64,34 @@ body {
     overflow: auto;
 }
 
-@media screen and (min-width: 600px) {
-    #infobox {
-        width: 470px;
-    }
+#main {
+    height: 100%;
 }
+
 
 @media screen and (max-width: 600px) {
     #mynetwork {
         height: 70%;
     }
 }
+
+#mynetwork{
+    height: -webkit-calc(100% - 240px);
+    height:    -moz-calc(100% - 240px);
+    height:         calc(100% - 240px);
+}
+
+#footer{
+    height: 100px;
+}
+
+@media screen and (min-width: 600px) {
+    #infobox {
+        width: 470px;
+    }
+}
+
+
 
 
 ul.ks-cboxtags {
@@ -146,6 +165,10 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 	<title>Prepositional verbs</title>
 </head>
 <body style="font-family: Verdana;">
+
+
+<div id="main">
+
 <div id="mynetwork"></div>
 
 <script type="text/javascript">
@@ -471,7 +494,9 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
     };
 </script>
 
+
 <center>
+
 <div id="infobox">
 <h1>Prepositional verbs</h1>
 <i>To close or open this informational box, click the information icon on the left bottom.</i><br><br>
@@ -489,6 +514,8 @@ The following languages are included:
 You can activate or deactivate any language by clicking on the buttons at the bottom. You can also move the verbs around or click on any of the lines or verbs to highlight them. 
 <br><br>
 </div>
+
+<div id="footer">
 
 <ul class="ks-cboxtags">
 <li>
@@ -511,6 +538,12 @@ You can activate or deactivate any language by clicking on the buttons at the bo
 </center>
 
 <button type='button' id="infobutton" class="but" onclick="toggle_vis()"> <img src="infoicon.png" width="40px"></button>
+
+</div>
+
+
+</div>
+
 
 </body>
 </html>
