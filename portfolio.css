@@ -1,0 +1,98 @@
+:root {
+  --date-width: 100px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: auto;
+}
+
+#main {
+    width: 90%;
+    margin: auto;
+}
+
+@media screen and (min-width: 800px) {
+    #main {
+        width: 750px;
+    }
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collap_content {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+} 
+
+.collap_text {
+    color: #666666;
+}
+
+.function_title {
+    display: inline-block;
+    width: -webkit-calc(100% - var(--date-width) - 10px);
+    width:    -moz-calc(100% - var(--date-width) - 10px);
+    width:         calc(100% - var(--date-width) - 10px);
+    font-size: 25px;
+    padding-top: 0px
+}
+
+.function_period {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: var(--date-width); 
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 0px;
+    padding-top: 4px;
+    
+}
+
+.function_company {
+    display: inline-block;
+    text-align: left;
+    color: #999999;
+}
+
+.function_header {
+    margin-bottom: 10px;
+}
+
+.function_short_description {
+    color: #555555;
+}
+

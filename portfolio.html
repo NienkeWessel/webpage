@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio Nienke Wessel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="portfolio.css">
+<style>
+
+</style>
+</head>
+<body>
+
+<div id="main">
+<p>Hello, this is a page</p>
+<br><br><br>
+
+<h1>Experience</h1>
+
+<button type="button" class="collapsible">
+    <div class="function_header">
+        <div class="function_title">Student Consultant</div>
+        <div class="function_period">2021</div>
+        <div class="function_company">Huawei</div>
+    </div>
+    <div class="function_short_description">I investigated technical business opportunities for Huawei in the Rotterdam Port with five other students.
+    </div>
+</button>
+<div class="collap_content">
+    <div class="collap_text">
+        <p>Tasks and activities:</p>
+        <ul>
+            <li>Perform literature research into ports</li>
+            <li>Hold interviews with Huawei employees, port employees and other experts in the field</li>
+            <li>Performed SWOT analysis of current Rotterdam and Shanghai ports</li>
+            <li>Identified four general trends for the port of 2030</li>
+            <li>Worked out five case studies relating to general trends</li>
+            <li>Identified main opportunity for Huawei</li>
+            <li>Built Business Model Canvas and Ecosystem Model Canvas</li>
+            <li>Created slide set with findings and sources</li>
+            <li>Presented findings to Huawei</li>
+        </ul> 
+    </div>
+</div> 
+
+
+<h1>Education</h1>
+
+<button type="button" class="collapsible">
+    <div class="function_header">
+        <div class="function_title">MSc Data Science</div>
+        <div class="function_period">2019-2023</div>
+        <div class="function_company">Radboud University Nijmegen</div>
+    </div>
+    <div class="function_short_description">Focus on Natural Language Processing.
+    </div>
+</button>
+<div class="collap_content">
+    <div class="collap_text">
+        <p>Example projects:</p>
+        <ul>
+            <li>Group project on evolutionary learning of GANs</li>
+            <li>Individual project on cross language authorship attribution</li>
+            <li>A web crawling group project where we worked on archiving the Dutch
+parts of the world wide web</li>
+            <li>Group project on automatically recognizing questions in spoken Dutch</li>
+        </ul> 
+    </div>
+</div> 
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+</div>
+
+</body>
+</html>
