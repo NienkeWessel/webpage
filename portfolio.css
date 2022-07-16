@@ -102,14 +102,17 @@ a {
 
 
 
-
+tr {
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+}
 
 .sub_row {
     display: none;
 }
 
 .active_row, .main_row:hover {
-  background-color: #ccc;
+  background-color: #eee;
 }
 
 .sub_row > td {
