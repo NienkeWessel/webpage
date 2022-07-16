@@ -458,6 +458,109 @@ issues within our faculty, for example during Faculty Board meetings.</p>
 
 <h1>Languages</h1>
 
+<center>
+<table>
+  <tr>
+    <th>Language</th>
+    <th>A1</th>
+    <th>A2</th>
+    <th>B1</th>
+    <th>B2</th>
+    <th>C1</th>
+    <th>C2</th>
+  </tr>
+  <tr class="main_row">
+    <td>English</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+  <tr class="sub_row">
+    <td>Reading</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+  <tr class="sub_row">
+    <td>Writing</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+  <tr class="sub_row">
+    <td>Speaking</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+  <tr class="sub_row">
+    <td>Listening</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+  <tr class="main_row">
+    <td>Dutch</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+  <tr class="sub_row">
+    <td>Reading</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+  <tr class="sub_row">
+    <td>Writing</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+  <tr class="sub_row">
+    <td>Speaking</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+  <tr class="sub_row">
+    <td>Listening</td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+    <td class="marked"></td>
+  </tr>
+</table> 
+</center>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -479,6 +582,34 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+var rows = document.getElementsByClassName("main_row");
+var i;
+
+for (i = 0; i < rows.length; i++) {
+  rows[i].addEventListener("click", function() {
+    this.classList.toggle("active_row");
+    var content = this.nextElementSibling;
+    while (content != null && content.classList.contains('sub_row')) {
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+        content = content.nextElementSibling;
+    }
+  });
+}
+
+
+var marked = document.getElementsByClassName("marked");
+var i;
+
+for (i = 0; i < marked.length; i++) {
+    marked[i].textContent = "\u2714"
+}
+
+
 </script>
 
 
