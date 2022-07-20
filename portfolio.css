@@ -107,6 +107,10 @@ tr {
    grid-template-columns: repeat(7, 1fr);
 }
 
+.main_row {
+    cursor: pointer;
+}
+
 .sub_row {
     display: none;
 }
