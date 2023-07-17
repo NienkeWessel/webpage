@@ -12,10 +12,22 @@ body {
     margin: auto;
 }
 
+.smallimg {
+    width: 100%;
+}
+
 @media screen and (min-width: 800px) {
     #main {
         width: 750px;
     }
+    
+    .smallimg {
+        width: 49%;
+    }
+}
+
+.bigimg {
+    width: 100%;
 }
 
 /* Style the button that is used to open and close the collapsible content */

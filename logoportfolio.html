@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio Nienke Wessel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="portfolio.css">
+<style>
+
+</style>
+</head>
+<body>
+
+<div id="main">
+
+<br><br><br>
+<h1><sc>Creative portfolio Nienke Wessel</sc></h1>
+<p>This page showcases some creative designs I have made in the past</p>
+
+
+<br>
+<h1>Thalia logos</h1>
+<p>My study association has logos for different committees and societies. I made logos for several of them, which are shown here. The idea behind these logos is that each of them fits with the association style sheet, while still having a unique touch that expresses the groups identity.</p> 
+
+<img class="smallimg" src="logos/GamingGuildLogoSquare.png">
+<img class="smallimg" src="logos/logo-basis_crafts_guild.png">
+<img class="smallimg" src="logos/HikersGuildLogoSquare.png">
+<img class="smallimg" src="logos/logo-basis_AdventuresGuild_nonumbers.png">
+
+<br><br>
+
+<h1>Other logos</h1>
+<p>The following logo was created to be printed on a t-shirt as a keepsake for those who studied in Egypt in the same semester as I did. Most parts were drawn digitally by me, such as the building on the front which represents the institute we studied at. Some elements such as the palm trees and cats are premade vector images.  </p>
+
+
+<img class="bigimg" src="logos/drawingNVICwithoutyear.png">
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+var rows = document.getElementsByClassName("main_row");
+var i;
+
+for (i = 0; i < rows.length; i++) {
+  rows[i].addEventListener("click", function() {
+    this.classList.toggle("active_row");
+    var content = this.nextElementSibling;
+    while (content != null && content.classList.contains('sub_row')) {
+        if (content.style.display === "grid") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "grid";
+        }
+        content = content.nextElementSibling;
+    }
+  });
+}
+
+
+var marked = document.getElementsByClassName("marked");
+var i;
+
+for (i = 0; i < marked.length; i++) {
+    marked[i].textContent = "\u2714"
+}
+
+
+</script>
+
+
+
+</div>
+
+</body>
+</html>
