@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Extra Information Poster CLIN 2024</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="portfolio.css">
+<style>
+
+</style>
+</head>
+<body>
+
+<div id="main">
+
+<br><br><br>
+<h1><sc>Extra Information Poster CLIN 2024</sc></h1>
+<p>This page contains extra graphs and results which accompany my CLIN 2024 poster.</p>
+
+
+
+<br>
+<h1>References</h1> 
+<p>Bracci, A. (2020). <i>PhonBank Luxembourgish Bracci Corpus</i>. https://doi.org/10.21415/18JG-CG50</p>
+<p>Demuth, K. (2004). <i>CHILDES English Providence Corpus</i>. https://doi.org/10.21415/T5R30X</p>
+<p>Fikkert, P. (1994). <i>On the Acquisition of Prosodic Structure</i>; (Doctoral dissertation). Rijksuniversiteit Leiden. The Hague.</p>
+<p>Fox-Boyer, A. (2019). <i>PhonBank German Fox-Boyer Corpus</i>. https://doi.org/10.21415/5V98-NF69</p>
+<p>Grimm, A. (2008). <i>The Development of Early Prosodic Word Structure in Child German</i> (Doctoral dissertation). Universität Potsdam.</p>
+<p>Kehoe, M., & Stoel-Gammon, C. (1997). The Acquisition of Prosodic Structure: An Investigation of Current Accounts of Children’s Prosodic Development. <i>Language</i>, 73 (1), 113. https://doi.org/10.2307/416597</p>
+<p>Levelt, C. (1994). <i>On the Acquisition of Place</i> (Doctoral dissertation). Rijksuniversiteit Leiden. The Hague.</p>
+<p>Yang, C. (2016). </i>The Price of Linguistic Productivity: How Children Learn to Break the Rules of Language</i>. The MIT Press.</p>
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+var rows = document.getElementsByClassName("main_row");
+var i;
+
+for (i = 0; i < rows.length; i++) {
+  rows[i].addEventListener("click", function() {
+    this.classList.toggle("active_row");
+    var content = this.nextElementSibling;
+    while (content != null && content.classList.contains('sub_row')) {
+        if (content.style.display === "grid") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "grid";
+        }
+        content = content.nextElementSibling;
+    }
+  });
+}
+
+
+var marked = document.getElementsByClassName("marked");
+var i;
+
+for (i = 0; i < marked.length; i++) {
+    marked[i].textContent = "\u2714"
+}
+
+
+</script>
+
+
+
+</div>
+
+</body>
+</html>
